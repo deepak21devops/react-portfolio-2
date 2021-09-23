@@ -1,8 +1,95 @@
-.container{
+@import "../../global.scss";
+
+.topbar{
     width: 100%;
     height: 70px;
-    background-color: #15023a;
+    background-color: whitesmoke;
     position:fixed;
     top:0;
-    z-index: 2;
+    transition:  all 1s ease;
+    z-index: 3;
+
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px 30px;
+
+        .left{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .navitems{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                font-weight: bold;
+                font-size: 15px;
+                .icon{
+                            margin-right: 7px;
+                            font-size: 18px;
+                }
+            }
+
+            .logo{
+                font-size: 40px;
+                text-decoration: none;
+                color:inherit;
+                font-weight: bold;
+                margin-right: 50px;
+            }
+        }
+
+        .right{
+               width: 32px;
+               height: 25px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+            .hamburger{
+                width: 100%;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;   
+                overflow: hidden;  
+              
+                      
+            }
+           
+
+            span{
+               
+                border: 2px solid $globalColor;
+                transform-origin:left;
+                transition:  all 2s ease;
+              
+            } 
+        } 
+    }
+    &.active{
+        background-color: $globalColor;
+        color: white;
+        .hamburger{
+            span{
+                &:first-child{
+                    transform: rotate(45deg);
+                    border: 1px solid white
+                   
+                    
+                }
+                &:last-child{
+                    transform:rotate(-45deg);
+                    border: 1px solid white
+                    
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                
+            }
+        }
+    }
 }

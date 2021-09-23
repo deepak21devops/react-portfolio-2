@@ -3,8 +3,8 @@ import './intro.scss'
 
 const Intro = () => {
     return (
-        <div className="intro">
-            cxx
+        <div className="intro-container" id="home">
+            INtro
         </div>
     )
 }
