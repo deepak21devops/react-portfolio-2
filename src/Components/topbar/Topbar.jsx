@@ -9,7 +9,7 @@ const Topbar = ({ menuflag, setMenuflag }) => {
         <div className={menuflag ? "topbar active" : "topbar"}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#contact" className="logo">Nebula.</a>
+                    <a href="#home" className="logo">Nebula.</a>
                     <div className="navitems">
                         <Person className="icon" />
                         <span>+91 123-456-7890</span>
