@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .works{
     background-color: crimson;
     display: flex;
@@ -5,11 +7,19 @@
     align-items: center;
     position: relative;
 
+    @include mobile{
+    //    justify-content: space-between;
+       
+    }
+
     .arrow{
         color: white;
         font-size: 70px;
         cursor: pointer;
         position: absolute;
+        @include mobile{
+            display: none;
+        }
         
         &.leftarrow{
             left:100px;
@@ -28,7 +38,12 @@
         left: 0;
         transition: all 1s ease-out;
 
-
+        @include mobile{
+            height: 100vh;
+            flex-direction: column;
+            margin-top: 100px;
+            
+        }
         .rightarrow{
         
             right:0;
@@ -43,6 +58,7 @@
             align-items: center;
             overflow: hidden;
             
+           
 
             .item{
                 height: 100%;
@@ -55,18 +71,34 @@
                 border-radius: 40px;
                 
                 
+                @include mobile{
+                    height:210px;
+                    width: 85%;
+                    margin-bottom: 10px;
+                };
+                
                 .left{
                     flex:5.5;
                     width: 50%;
                     display: flex;
                     justify-content: center;
+                    
+                    @include mobile{
+                        padding:20px 0;
+                        
+                    }
                    
+                    
 
                     .leftContainer{
                         
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
+                        @include mobile{
+                            overflow: hidden;
+                            margin-right: 10px;
+                        }
                    
                         
                         .imageContainer{
@@ -88,16 +120,35 @@
                         h1{
                             font-size: 25px;
                             margin-bottom: 15px;
+
+                            @include mobile{
+                                font-size: 12px;
+                                padding-bottom: 5px;
+                                margin-bottom: 10px;
+                            }
                         }
                         p{
                             font-size: 15px;
                             margin-bottom: 20px;
+
+                            @include mobile{
+                                font-size: 12px;
+                                margin-bottom: 10px;
+                                overflow: hidden;
+                            }
+
+                            
                            
                         }
                         span{
                             text-decoration: underline;
                             font-weight: bold;
                             cursor: pointer;
+
+                            @include mobile{
+                                font-size: 10px;
+                                margin-bottom: 10px;
+                            }
                         }
                     }
                    

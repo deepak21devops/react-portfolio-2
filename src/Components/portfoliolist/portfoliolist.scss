@@ -1,17 +1,25 @@
 @import "../../global.scss";
 
 li{
-    width: 100%;
-    margin-right: 20px;
-    font-size:15px;
-    font-weight: bold;
-    padding:10px 15px;
+    // width: 100%;
+    // margin-right: 20px;
+    // font-size:15px;
+    // font-weight: bold;
+    // padding:10px 15px;
+    // cursor: pointer;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    word-wrap: normal;
-   
+
+    @include mobile{
+        margin-right: 20px;
+      }
+    
     &.active{
         background-color: $globalColor;
         color:white;

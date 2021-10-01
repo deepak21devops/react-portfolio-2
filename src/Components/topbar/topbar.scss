@@ -15,6 +15,11 @@
         align-items: center;
         padding:10px 30px;
 
+        @include mobile{
+            display: flex;
+            
+        }
+
         .left{
 
             display: flex;
@@ -31,6 +36,9 @@
                             margin-right: 7px;
                             font-size: 18px;
                 }
+                @include mobile{
+                    display: none;
+                }
             }
 
             .logo{
@@ -39,6 +47,12 @@
                 color:inherit;
                 font-weight: bold;
                 margin-right: 50px;
+
+                @include mobile{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
 
